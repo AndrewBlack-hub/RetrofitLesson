@@ -27,13 +27,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getMovies(): Observable<MoviesResponse> {
-        return NetworkService.getInstance().getJsonApi().getMovies() //создание http клиента и вызов метода с сервера
+        return NetworkService.getInstance().getJsonApi()
+            .getMovies(50) //создание http клиента и вызов метода с сервера
     }
 
     private fun displayMovies(moviesResponse: MoviesResponse) {
         val stringBuilder = StringBuilder()
         moviesResponse.result?.let {
-            it.forEach { result -> Log.e("TAG", result.title)
+            it.forEach { result ->
+                Log.e("TAG", result.title)
                 stringBuilder.append(result.title)
                 stringBuilder.append("\n")
             }
