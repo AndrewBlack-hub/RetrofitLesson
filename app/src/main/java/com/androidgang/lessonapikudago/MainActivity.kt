@@ -35,11 +35,11 @@ class MainActivity : AppCompatActivity() {
         val stringBuilder = StringBuilder()
         moviesResponse.result?.let {
             it.forEach { result ->
-                Log.e("TAG", result.title)
+                Log.e("TAG", result.title)//полученные данные выводим в лог
                 stringBuilder.append(result.title)
-                stringBuilder.append("\n")
+                stringBuilder.append("\n")//новые данные добавляются с новой строки
             }
         }
-        titleMovies.text = stringBuilder
+        titleMovies.text = stringBuilder//готовые данные показываем в TextView
     }
 }
