@@ -24,7 +24,7 @@ class NetworkService private constructor() {
 
     init {
         val interceptor: HttpLoggingInterceptor = HttpLoggingInterceptor()
-            .setLevel(HttpLoggingInterceptor.Level.BODY)//для того чтобы писать в лог
+            .setLevel(HttpLoggingInterceptor.Level.BODY)//выводить процесс взаимодействия с сервером в лог
 
         val client: OkHttpClient.Builder = OkHttpClient.Builder()
             .addInterceptor(interceptor)//Вещь, которая связывает твое приложение с интернетом
