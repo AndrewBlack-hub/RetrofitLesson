@@ -6,5 +6,5 @@ import retrofit2.http.Query
 
 interface ApiService {
     @GET("public-api/v1.4/movies/")
-    fun getMovies(@Query("page_size") size: Int): Observable<MoviesResponse>
+    fun getMovies(@Query("page_size") size: Int, @Query("fields") fields: String): Observable<MoviesResponse>
 }

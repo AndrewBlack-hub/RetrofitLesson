@@ -21,44 +21,43 @@ class MoviesResponse {
     @Expose
     val result: List<Result>? = null
 
-    companion object {
-        class Poster {
+    class Poster {
 
-            @SerializedName("image")
-            @Expose
-            val image: String = ""
+        @SerializedName("image")
+        @Expose
+        val image: String = ""
 
-            @SerializedName("source")
-            @Expose
-            val source: Source? = null
+        @SerializedName("source")
+        @Expose
+        val source: Source? = null
 
-        }
+    }
 
-        class Result {
+    class Result {
 
-            @SerializedName("id")
-            @Expose
-            val id: Int = 0
+        @SerializedName("id")
+        @Expose
+        val id: Int = 0
 
-            @SerializedName("title")
-            @Expose
-            val title: String = ""
+        @SerializedName("title")
+        @Expose
+        val title: String = ""
 
-            @SerializedName("poster")
-            @Expose
-            val poster: Poster? = null
+        @SerializedName("poster")
+        @Expose
+        val poster: Poster? = null
 
-        }
+    }
 
-        class Source {
-            @SerializedName("name")
-            @Expose
-            val name: String = ""
+    class Source {
+        @SerializedName("name")
+        @Expose
+        val name: String = ""
 
-            @SerializedName("link")
-            @Expose
-            val link: String = ""
+        @SerializedName("link")
+        @Expose
+        val link: String = ""
 
-        }
+
     }
 }
