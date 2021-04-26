@@ -57,7 +57,5 @@ class MoviesResponse {
         @SerializedName("link")
         @Expose
         val link: String = ""
-
-
     }
 }

@@ -28,8 +28,6 @@ class MainActivity : AppCompatActivity() {
             .observeOn(AndroidSchedulers.mainThread())//где получаем ответ (в главном потоке)
             .doOnNext { moviesResponse -> displayMovies(moviesResponse) }//выводит результат в лог
             .subscribe()
-
-
     }
 
     private fun getMovies(): Observable<MoviesResponse> {
